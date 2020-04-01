@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		body{
+			background: #686de0;
+		}
+		.box{
+			height: 450px;
+			width: 800px;
+            border: 1px solid blue;
+            padding: 20px;
+            margin-left: 50%;
+            margin-top: 20%;
+           transform: translate(-50%,-50%);
+           overflow: hidden;
+           background: #fdcb6e;
+           justify-content: center;
+
+		}
+		.text1{
+			text-align: center;
+			font-kerning: normal;
+			color: #d63031;
+			font-size: 25px;
+			font-weight: 900;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+		}
+        #img1{
+        	height: 225px;
+        	width: 225px;
+        	border: 1px solid red;
+        	overflow: hidden;
+        	border-radius: 50%;
+
+        	box-shadow: 0px 2px 5px 1px black;
+        }
+        #img1 img{
+        	height: 100%;
+        	width: 100%;
+        	margin-bottom: -20px;
+        }
+
+         #img2{
+        	height: 225px;
+        	width: 225px;
+        	border: 1px solid red;
+        	overflow: hidden;
+        	margin-left: 300px;
+        	border-radius: 50%;
+        	box-shadow: 0px 2px 5px 1px black;
+        }
+        .flex{
+        	display: flex;
+        	justify-content: center;
+        	
+        }
+        .flex2{
+        	display: flex;
+        	justify-content: center;
+        	margin-top: 30px;
+        }
+        #i2{
+        	width: 50px;
+        	border: 1px solid black;
+        	margin-right: 56%;
+        	font-size: 20px;
+        	padding:10px;
+        	background: #f9ca24;
+        }
+        #i1{
+        	width: 50px;
+        	border: 1px solid black;
+        	font-size: 20px;
+        	padding:10px;
+        	background: #f9ca24;
+        }
+        .button{
+        	padding: 14px 32px;
+        	font-size: 20px;
+        	text-align: center;
+        	background: #F8EFBA;
+        	color: #222f3e;
+        	margin-left: 340px;
+        	font-family: sans-serif;
+        	font-weight: 900;
+        	transition: 0.3s ease;
+        }
+        .button:hover{
+        	color: #1dd1a1;
+        }
+        #demo{
+        	text-align: center;
+        	font-size: 25px;
+        	color: #5f27cd;
+        	font-weight: 900;
+        }
+	</style>
+	<title>Guessing project</title>
+</head>
+<body>
+<div class="box">
+	<div class="text1">Enter The Number to checked</div>
+	<div class="flex"> 
+	<div id="img1">
+		<img src="user.jpg" alt="user" ></div><div id="img2">
+		<img src="computer.png"></div></div>
+	
+	<div class="flex2"><input type="text" name="text1" id="i2">
+	<input type="text" name="input" id="i1"></div>
+	<button class="button" onclick="add()">Result</button>
+	<p id="demo"></p>
+</div>
+<script type="text/javascript">
+	function add()
+	{
+		var a = Number(document.getElementById('i2').value);
+		var d =Math.floor(Math.random() * 10) + 1;
+		var c,d;
+		c = new Number(a);
+		document.getElementById('i1').value=d;
+		if(c==d)
+		{
+			document.getElementById('demo').innerHTML = "come to work !";
+		}
+		else{
+		    document.getElementById('demo').innerHTML = "Not matched";	
+		}
+	}
+</script>
+</body>
+</html>
